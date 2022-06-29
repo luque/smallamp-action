@@ -1,4 +1,4 @@
-de  module.exports =
+module.exports =
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
