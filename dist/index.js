@@ -1,4 +1,4 @@
-module.exports =
+de  module.exports =
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -39,8 +39,8 @@ Push:
 const PHARO_HOME = path.join(os.homedir(), '.pharo')
 const PHARO_VM = 'pharo'
 const PHARO_IMAGE = 'Pharo.image'
-const COMMIT_USER = 'mabdi'
-const COMMIT_EMAIL = 'mehrdad.abdi@uantwerpen.be'
+const COMMIT_USER = process.env.GITHUB_ACTOR
+const COMMIT_EMAIL = process.env.COMMIT_EMAIL
 const DEFAULT_BRANCH = 'master'
 const DEFAULT_SOURCE = 'mabdi/small-amp'
 
