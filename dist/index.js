@@ -411,6 +411,7 @@ async function create_pull_request(){
   const octokit = github.getOctokit(myToken);
   const owner = process.env.GITHUB_REPOSITORY_OWNER;
   const pullRequest_prefix = process.env.PULL_REQUEST_PREFIX || "[SmallAmp]";
+  const pullRequest_body = process.env.PULL_REQUEST_BODY || "I submit this pull request to suggest new tests based on the output of SmallAmp tool.";
   await logMe(`Sending pull request:\n owner: ${owner},\n repo: ${ REPO_NAME },\n title: ${pullRequest_prefix} amplified tests for action number ${run_number},\n head: ${new_branch_name},\n base: ${base_branch}`)
   try{
     const res = await octokit.rest.pulls.create({
@@ -420,7 +421,7 @@ async function create_pull_request(){
         head: new_branch_name,
         base: base_branch,
         maintainer_can_modify: true,
-        body: "I submit this pull request to suggest new tests based on the output of test amplification tool."
+        body: `${pullRequest_body}`
     });
     await logMe('Pull request sent: \n' + res)
   } catch (error) {
