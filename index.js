@@ -32,8 +32,8 @@ Push:
 const PHARO_HOME = path.join(os.homedir(), '.pharo')
 const PHARO_VM = 'pharo'
 const PHARO_IMAGE = 'Pharo.image'
-const COMMIT_USER = 'mabdi'
-const COMMIT_EMAIL = 'mehrdad.abdi@uantwerpen.be'
+const COMMIT_USER = 'luque'
+const COMMIT_EMAIL = 'rafael.luque@osoco.es'
 const DEFAULT_BRANCH = 'master'
 const DEFAULT_SOURCE = 'mabdi/small-amp'
 
